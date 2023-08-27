@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Firebase Recipe</h1>
+        <h1>Firebase Recipe v1.0.1</h1>
       </header>
     </div>
   );

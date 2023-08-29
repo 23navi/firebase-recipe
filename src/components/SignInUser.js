@@ -1,13 +1,13 @@
 import { useState } from "react";
 import FirebaseAuthService from "../FirebaseAuthService";
 
-export default function RegisterUser({ user }) {
+export default function SignInUser({ user }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = async () => {
+  const handleSignIn = async () => {
     try {
-      await FirebaseAuthService.registerUser(email, password);
+      await FirebaseAuthService.loginUser(email, password);
       setEmail("");
       setPassword("");
     } catch (error) {
@@ -18,7 +18,7 @@ export default function RegisterUser({ user }) {
 
   return (
     <div>
-      <h1>Register User</h1>
+      <h1>SignIn User</h1>
       <input
         type="text"
         placeholder="email"
@@ -31,7 +31,7 @@ export default function RegisterUser({ user }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleRegister}>Register</button>
+      <button onClick={handleSignIn}>Register</button>
     </div>
   );
 }

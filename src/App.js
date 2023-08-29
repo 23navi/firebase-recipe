@@ -1,6 +1,8 @@
 import { useState } from "react";
 import FirebaseAuthService from "./FirebaseAuthService";
 import RegisterUser from "./components/RegisterUser";
+import LogoutUser from "./components/LogoutUser";
+import SignInUser from "./components/SignInUser";
 import "./App.css";
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         </h2>
       </header>
       <RegisterUser user={currentUser} />
+      <SignInUser user={currentUser} />
+      <LogoutUser />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+// This is the only place we do import firebase from "firebase";.. rest everywhere in our app we will do import firebase from "./FirebaseConfig"
 import firebase from "firebase";
 const firebaseConfig = {
   apiKey: "AIzaSyAUtkVvRoUTl3lUujjN-vT10liatn8THew",

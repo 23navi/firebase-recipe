@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "./FirebaseConfig";
 const auth = firebase.auth();
 
 const signInWithGoogle = () => {

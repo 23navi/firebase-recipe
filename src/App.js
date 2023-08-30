@@ -3,6 +3,7 @@ import FirebaseAuthService from "./FirebaseAuthService";
 // import RegisterUser from "./components/RegisterUser";
 import LogoutUser from "./components/LogoutUser";
 import SignInUser from "./components/SignInUser";
+import ForgotPassword from "./components/ForgotPassword";
 import "./App.css";
 
 function App() {
@@ -12,9 +13,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Firebase Recipe v1.0.1</h1>
+      </header>
+      <div className="title-row">
         <h2>
           Current logged in user: {currentUser ? currentUser.email : "None"}
         </h2>
+        {!currentUser && <ForgotPassword />}
         {!currentUser && (
           <>
             {/* <RegisterUser user={currentUser} /> */}
@@ -25,7 +29,7 @@ function App() {
           </>
         )}
         {currentUser && <LogoutUser />}
-      </header>
+      </div>
     </div>
   );
 }
